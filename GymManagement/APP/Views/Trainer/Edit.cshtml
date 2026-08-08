@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model BLL.DTOs.TrainerDTO
+
+<h2>Edit Trainer</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="TrainerId" />
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Speciality</label>
+        <input asp-for="Speciality" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Phone</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Experience</label>
+        <input asp-for="Experience" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Update
+    </button>
+
+</form>
+

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "DeleteProfile";
+}
+
+@model DAL.EF.Tables.User
+
+<h2>Delete Profile</h2>
+
+<h4>
+    Are you sure?
+</h4>
+
+<form method="post">
+
+    <input type="hidden" name="id" value="@Model.UserId" />
+
+    <button type="submit" name="Decision" value="Yes" class="btn btn-primary">
+        Yes
+    </button>
+
+    <button type="submit" name="Decision" value="No" class="btn btn-primary">
+        No
+    </button>
+
+</form>
+

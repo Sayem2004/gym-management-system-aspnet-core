@@ -1,0 +1,62 @@
+﻿@model List<BLL.DTOs.PackageDTO>
+
+<h2>
+    Dashboard
+</h2>
+
+<h4>
+    Welcome @ViewBag.Uname
+</h4>
+
+<br />
+
+<a asp-action="Profile" class="btn btn-info">
+    My Profile
+</a>
+
+<a asp-action="EditProfile" class="btn btn-primary">
+    Edit Profile
+</a>
+
+<a asp-action="DeleteProfile" class="btn btn-primary">
+    Delete Profile
+</a>
+
+<a asp-action="Logout" class="btn btn-dark">
+    Logout
+</a>
+
+<br />
+<br />
+
+<h3>
+    Available Packages
+</h3>
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>ID</th>
+        <th>Title</th>
+        <th>Duration</th>
+        <th>Price</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.PackageId</td>
+
+            <td>@item.Title</td>
+
+            <td>@item.Duration Month</td>
+
+            <td>@item.Price Tk</td>
+
+        </tr>
+    }
+
+</table>

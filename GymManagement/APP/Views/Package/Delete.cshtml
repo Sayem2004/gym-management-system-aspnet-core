@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+@model BLL.DTOs.PackageDTO
+
+<h2>Delete Package</h2>
+
+<h4>
+    Are you sure?
+</h4>
+
+<form method="post">
+
+    <input type="hidden" name="id" value="@Model.PackageId" />
+
+    <button type="submit"
+            name="Decision"
+            value="Yes"
+            class="btn btn-primary">
+
+        Yes
+
+    </button>
+
+    <button type="submit"
+            name="Decision"
+            value="No"
+            class="btn btn-primary">
+
+        No
+
+    </button>
+
+</form>
+

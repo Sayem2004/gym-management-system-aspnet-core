@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Registration";
+}
+
+@model BLL.DTOs.RegDTO
+
+<h2>Registration</h2>
+
+<form method="post">
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Phone</label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Username</label>
+        <input asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Password</label>
+        <input type="password" asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Confirm Password</label>
+        <input type="password" asp-for="ConfPassword" class="form-control" />
+        <span asp-validation-for="ConfPassword" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Registration
+    </button>
+
+</form>
+
+@if (TempData["Msg"] != null)
+{
+    <p class="text-success">
+        @TempData["Msg"]
+    </p>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
