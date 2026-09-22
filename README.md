@@ -156,6 +156,7 @@ main
 ## Author
 **MD. AL-IMRAN SAYEM**
 GitHub: [https://github.com/Sayem2004](https://github.com/Sayem2004)
+Email: (mdalimransayem@gmail.com)
 
 ## Purpose
 This project was developed as an academic and learning project to practice **ASP.NET Core MVC, N-Tier Architecture, Entity Framework Core, SQL Server, CRUD operations, authentication, DTOs, Repository Pattern, and Service Layer architecture**.
